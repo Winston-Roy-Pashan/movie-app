@@ -1,0 +1,38 @@
+.toolbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  background-color: #1976d2;
+  color: white;
+  font-weight: 600;
+  z-index: 4;
+}
+
+.spacer {
+  flex: 1;
+  }
+
+.toolbar img {
+  margin: 0 16px;
+}
+
+a,
+  a:visited,
+  a:hover {
+    color: #020c16;
+    text-decoration: none;
+    //margin-left: 90px;
+    margin-right: 20px;
+    top:0;
+    right: 0;
+    text-align: right;
+  }
+
+  a:hover {
+    color: #f0f4f8;
+  }
+

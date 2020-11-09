@@ -1,0 +1,123 @@
+@import '../../../variables.scss';
+.movie-container {
+          position:absolute;
+          top:65px;
+         // bottom:90px;
+          left: 0;
+          right: 0;
+          margin-bottom: 60px;
+        
+          -webkit-transform: scale(1);
+          -ms-transform: scale(1);
+          transform: scale(1);
+          -webkit-transition: .3s ease;
+          transition: .3s ease;
+
+        .input-form{
+           // position: absolute;
+          background-color: aqua;
+          border: 1px solid gray;
+          padding:20px;
+          
+          input{
+          display: block;
+          // padding:10px;
+          height: 30px;
+          margin-bottom: 12px;
+         
+          }
+          .radio-btns {
+            li {
+              list-style: none;
+              display: inline-block;
+             // display: flex;
+            }
+          }
+        }
+  
+    .movie {
+      background: lightblue;
+      display: inline-flex;
+      // justify-content: space-between;
+      height: 300px;
+      //width: 300px;
+      padding: 12px;
+      border-radius: 5px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      position: relative;
+      margin-left: 10px;
+     // box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+
+
+      .image {
+        max-width: 100%;
+        max-height: 100%;
+        align-items: center;
+        opacity: 1;
+        display: block;
+        transition: .5s ease;
+        backface-visibility: hidden;
+      }
+
+      .details {
+        font-size: 40px;
+        font-weight: bold;
+        margin-left: 12px;
+
+        transition: .5s ease;
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        text-align: center;
+      
+
+        p {
+          margin: 0;
+        }
+  
+        .name {
+          color: red;
+          font-size: 24px;
+          color: rgb(238, 234, 234);
+          font-size: 16px;
+          padding: 16px 32px;
+        }
+       
+      }
+
+      .add{
+        button {
+          //position: absolute;
+          //bottom: 10px;
+          height: 40px;
+           width: 70px;
+        }
+      }
+      }
+
+    .movie:nth-child(even) {
+      background: $reddish;
+    }
+    
+    .movie:hover .image {
+      opacity: 0.9;
+     
+    }
+    
+    .movie:hover .details {
+      opacity: 30;
+     
+    }
+    .movie:hover .image {
+      -webkit-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+      transform: scale(1.2);
+    }
+
+  }
+
+

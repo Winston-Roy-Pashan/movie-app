@@ -1,0 +1,57 @@
+<div class="movie-container">
+    <div class="input-form">
+        TITLE
+        <input [(ngModel)]="movie.title" placeholder="name" type="text">
+        YEAR
+        <input [(ngModel)]="movie.year" placeholder="price" type="text">
+        RATINGS:
+        <!-- <input [(ngModel)]="movie.os" placeholder="os" type="text" > -->
+        <div class="radio-btns">
+
+            <li>
+                <input type="radio" name="1" id="one" [(ngModel)]="movie.rating" value="1">
+                <label for="one">1</label>
+            </li>
+            <li>
+                <input type="radio" name="1" id="two" [(ngModel)]="movie.rating" value="2">
+                <label for="two">2</label>
+            </li>
+            <li>
+                <input type="radio" name="1" id="three" [(ngModel)]="movie.rating" value="3">
+                <label for="three">3</label>
+            </li>
+            <li>
+                <input type="radio" name="1" id="four" [(ngModel)]="movie.rating" value="4">
+                <label for="four">4</label>
+            </li>
+            <li>
+                <input type="radio" name="1" id="five" [(ngModel)]="movie.rating" value="5">
+                <label for="five">5</label>
+            </li>
+        </div>
+        <br>
+        IMAGE
+        <input [(ngModel)]="movie.imageUrl" placeholder="imageUrl" type="text">
+        <div class="addbtn">
+            <button class="btn btn-primary" (click)="save()">ADD</button>
+        </div>
+    </div>
+
+    <div class="movie" *ngFor="let movie of movielist">
+        <a routerLink="/movies/{{movie.id}}">
+
+            <img class="image" [src]="movie.imageUrl" alt="">
+
+            <div class="details">
+                <p class="name">ID:{{movie.id}}</p>
+                <p class="name">{{movie.title}}</p>
+                <p class="name">{{movie.year}}</p>
+                <p class="name">Rating:{{rating(movie.rating)}}</p>
+
+                <br><br>
+                <button *ngIf="false" class="btn btn-danger" (click)="delete(movie)">DELETE</button>
+
+            </div>
+        </a>
+    </div>
+</div>
