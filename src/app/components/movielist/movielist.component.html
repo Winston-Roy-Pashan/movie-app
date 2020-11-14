@@ -1,5 +1,6 @@
+<h2 *ngIf="isloading">Loading...</h2>
 <div class="movie-container">
-    <div class="input-form">
+    <div  *ngIf="false" class="input-form">
         TITLE
         <input [(ngModel)]="movie.title" placeholder="name" type="text">
         YEAR
@@ -40,12 +41,12 @@
     <div class="movie" *ngFor="let movie of movielist">
         <a routerLink="/movies/{{movie.id}}">
 
-            <img class="image" [src]="movie.imageUrl" alt="">
+            <img class="image" src="{{ movie.thumbnail.path +'.'+movie.thumbnail.extension }} "alt="">
 
             <div class="details">
                 <p class="name">ID:{{movie.id}}</p>
-                <p class="name">{{movie.title}}</p>
-                <p class="name">{{movie.year}}</p>
+                <p class="name">{{movie.title  | slice:0:10}}</p>
+                <p class="name">{{movie.endYear}}</p>
                 <p class="name">Rating:{{rating(movie.rating)}}</p>
 
                 <br><br>

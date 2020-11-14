@@ -1,0 +1,10 @@
+<h2 *ngIf="isloading">Loading...</h2>
+<div class="movie-list">
+    <div class="movie" *ngFor="let tv of tvshowList">
+        <div class="link">
+              <img class="image" src="{{ tv.thumbnail.path +'.'+tv.thumbnail.extension }} "alt=""> 
+            <p class="name">{{tv.title | slice:0:10}}</p>
+            <p class="year">{{tv.description | shorten:30}}</p>
+        </div>
+    </div>
+</div>

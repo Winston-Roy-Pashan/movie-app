@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { MovielistService } from 'src/app/service/movielist.service';
-import { Movie } from '../movielist/movielist';
-
+import { Movie } from '../../interface/movielist';
 @Component({
   selector: 'app-moviedetails',
   templateUrl: './moviedetails.component.html',
@@ -20,8 +19,13 @@ export class MoviedetailsComponent implements OnInit {
     this.loadMovie(id);
   }
 
-  loadMovie(id: string): void {
-    this.movie = this.movieservice.getMovie(id)
+  loadMovie(id: string):void {
+   // this.movie = this.movieservice.getMovie(id)
+    this.movieservice.getMovie(id).subscribe(response => {
+      this.movie = response.data.results[0];
+      console.log("miviee-- ",this.movie);
+      console.log("Responce-- ",response);
+    });
   }
 
 }

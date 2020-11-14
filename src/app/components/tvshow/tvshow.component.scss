@@ -1,0 +1,57 @@
+@import '../../../styles.scss';
+
+
+h2{
+    @include loading;
+    @include font;
+}
+
+.movie-list {
+    position: absolute;
+    top:130px;
+    .movie {
+        border: 1px solid blue;
+        margin:12px;
+        width: 150px;
+        padding: 2px;
+        border-radius: 5px;
+        display: inline-flex;
+        height: 320px;
+        .link {
+            cursor: pointer;
+            position: relative;
+            img {
+                width: 140px;
+                height: 200px;
+            }
+            p {
+                margin: 0;
+            }
+
+            .name {
+                font-weight: bold;
+            }
+
+            .year {
+                font-size: 14px;
+            }
+           
+
+           
+        }
+    }
+}
+
+// .page{
+//     position: absolute;
+//     bottom: 0;
+//     left: 0;
+
+//     button {
+//         //position: relative; 
+//         bottom: 50px;
+//        margin-right: 10px;
+//        left: 0;
+       
+//     }
+// }

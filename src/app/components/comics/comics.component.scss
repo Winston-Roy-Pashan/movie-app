@@ -1,15 +1,13 @@
 @import '../../../variables.scss';
 @import '../../../styles.scss';
 
-
 h2{
-  @include font;
-  @include loading ;
-   }
+ @include font;
+ @include loading ;
+  }
 
 
-
-.movie-container {
+.comic-container {
           position:absolute;
           top:120px;
          // bottom:90px;
@@ -45,7 +43,7 @@ h2{
           }
         }
   
-    .movie {
+    .comic {
       background: lightblue;
       display: inline-flex;
       // justify-content: space-between;
@@ -112,21 +110,21 @@ h2{
       }
       }
 
-    .movie:nth-child(even) {
+    .comic:nth-child(even) {
       background: $reddish;
     }
     
-    .movie:hover .image {
+    .comic:hover .image {
       opacity: 0.9;
      
     }
     
-    .movie:hover .details {
+    .comic:hover .details {
       //background-color: rgb(199, 197, 197);
       opacity: 30;
      
     }
-    .movie:hover .image {
+    .comic:hover .image {
       -webkit-transform: scale(1.2);
       -ms-transform: scale(1.2);
       transform: scale(1.2);

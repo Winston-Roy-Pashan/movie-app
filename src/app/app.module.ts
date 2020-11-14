@@ -2,12 +2,18 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { MovielistComponent } from './components/movielist/movielist.component';
 import { MoviedetailsComponent } from './components/moviedetails/moviedetails.component';
+import { ComicsComponent } from './components/comics/comics.component';
+import { CharactersComponent } from './components/characters/characters.component';
+import { TvshowComponent } from './components/tvshow/tvshow.component';
+import { VedioComponent } from './components/vedio/vedio.component';
+import { ShortenPipe } from 'src/pipe/shorten';
 
 @NgModule({
   declarations: [
@@ -15,12 +21,18 @@ import { MoviedetailsComponent } from './components/moviedetails/moviedetails.co
     HeaderComponent,
     FooterComponent,
     MovielistComponent,
-    MoviedetailsComponent
+    MoviedetailsComponent,
+    ComicsComponent,
+    CharactersComponent,
+    TvshowComponent,
+    VedioComponent,
+    ShortenPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

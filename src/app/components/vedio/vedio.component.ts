@@ -1,13 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  selector: 'app-vedio',
+  templateUrl: './vedio.component.html',
+  styleUrls: ['./vedio.component.scss']
 })
-export class HeaderComponent implements OnInit {
-  videoUrl = 'https://www.youtube.com/embed/2JeKfQ2r2r8';
+export class VedioComponent implements OnInit {
+
+  videoUrl = 'https://www.youtube.com/embed/TcMBFSGVi1c';
   safeURL;
+
   constructor(private _sanitizer: DomSanitizer) { }
 
   ngOnInit(): void {

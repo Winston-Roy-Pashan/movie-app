@@ -1,0 +1,22 @@
+<h2 *ngIf="isloading">Loading...</h2>
+
+<div class="comic-container">
+    
+   <div class="comic" *ngFor="let comic of comicList">
+        <a routerLink="/comics/{{comic.id}}">
+
+            <img class="image" src="{{ comic.thumbnail.path +'.'+comic.thumbnail.extension }} "alt="">
+
+            <div class="details">
+                <p class="name">ID:{{comic.id}}</p>
+                <p class="name">{{comic.title  | slice:0:10}}</p>
+                <p class="name">{{comic.endYear}}</p>
+                <p class="name">Rating:{{comic.rating}}</p>
+
+                <br><br>
+                <button *ngIf="false" class="btn btn-danger" (click)="delete(comic)">DELETE</button>
+
+            </div>
+        </a>
+    </div>
+</div>
