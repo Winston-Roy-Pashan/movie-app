@@ -3,6 +3,10 @@
 @import url('https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css');
 @import '../../../styles.scss';
 
+
+.fixed{
+position: fixed;
+}
 .highlight-light{
   @include highlight;
 }
@@ -15,6 +19,7 @@
 
 
 .row2{
+ 
 margin-left: 270px;  
 }
 
@@ -29,5 +34,4 @@ margin-left: 270px;
   };
   
  }
-
-
+ 

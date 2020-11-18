@@ -14,6 +14,7 @@ import { CharactersComponent } from './components/characters/characters.componen
 import { TvshowComponent } from './components/tvshow/tvshow.component';
 import { VedioComponent } from './components/vedio/vedio.component';
 import { ShortenPipe } from 'src/pipe/shorten';
+import { HomecomponentsComponent } from './components/homecomponents/homecomponents.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ShortenPipe } from 'src/pipe/shorten';
     CharactersComponent,
     TvshowComponent,
     VedioComponent,
-    ShortenPipe
+    ShortenPipe,
+    HomecomponentsComponent
   ],
   imports: [
     BrowserModule,

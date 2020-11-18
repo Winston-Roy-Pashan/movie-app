@@ -63,6 +63,7 @@ h2{
       }
 
       .image {
+        overflow: hidden;
         max-width: 100%;
         max-height: 100%;
         align-items: center;
@@ -124,12 +125,14 @@ h2{
     .movie:hover .details {
       //background-color: rgb(199, 197, 197);
       opacity: 30;
+      
      
     }
     .movie:hover .image {
       -webkit-transform: scale(1.2);
       -ms-transform: scale(1.2);
       transform: scale(1.2);
+      
     }
 
   }
