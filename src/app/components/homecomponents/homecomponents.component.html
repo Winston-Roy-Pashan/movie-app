@@ -11,7 +11,6 @@
   <div class="moviehead">
     <h2 *ngIf="isloading">Loading...
         <div *ngIf="isloading" class="spinner-border" role="status">
-          <!-- <span class="sr-only">Loading...</span> -->
         </div>
         </h2>
     <div class="poster" *ngFor="let char of movielist; let i=index ; ">
@@ -29,7 +28,6 @@
     <div class="movie-list">
         <h2 *ngIf="isloading">Loading...
             <div *ngIf="isloading" class="spinner-border" role="status">
-              <!-- <span class="sr-only">Loading...</span> -->
             </div>
             </h2>
         <div class="movie" *ngFor="let tv of tvshowList; let i=index ;">

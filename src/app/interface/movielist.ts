@@ -7,7 +7,6 @@ export interface Movie {
   title: string;
   description: string;
   resourceURI: string;
- // urls: Url[];
   startYear: number;
   endYear: number;
   rating: string;
@@ -15,12 +14,5 @@ export interface Movie {
   modified: Date;
   thumbnail: Thumbnail;
   imageUrl: string,
-  // creators: Creators;
-  // characters: Characters;
-  // stories: Stories;
-  // comics: Comics;
-  // events: Events;
-  // next: Next;
-  // previous?: any;
 }
 

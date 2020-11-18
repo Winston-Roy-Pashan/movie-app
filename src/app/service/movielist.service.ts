@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-//import { MOVIE } from '../components/movielist/mocklist';
 import { Movie } from '../interface/movielist';
 import { Md5 } from 'ts-md5/dist/md5'
 

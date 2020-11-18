@@ -10,8 +10,8 @@ import { Characters } from '../../interface/characters';
   styleUrls: ['./characters.component.scss']
 })
 export class CharactersComponent implements OnInit {
-  isloading=false;
-  characterList:Characters[];
+  isloading = false;
+  characterList: Characters[];
 
   constructor(private movieservice: MovielistService) { }
 
@@ -20,12 +20,10 @@ export class CharactersComponent implements OnInit {
 
   }
   loadCharacters(): void {
-    this.isloading=true;
+    this.isloading = true;
     this.movieservice.getAllCharacters().subscribe(response => {
       this.characterList = response.data.results;
-      console.log("moviess...........",this.characterList)
-      console.log('MOVIES', response);
-      this.isloading=false;
+      this.isloading = false;
     });
   }
 

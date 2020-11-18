@@ -10,7 +10,6 @@ import { TvshowComponent } from './components/tvshow/tvshow.component';
 import { VedioComponent } from './components/vedio/vedio.component';
 
 const routes: Routes = [
-  //{ path: '', redirectTo: '/main', pathMatch: 'full' },
   { path: '', component: HomecomponentsComponent },
   { path: 'movies', component: MovielistComponent },
  { path: 'movies/:movieid', component: MoviedetailsComponent },

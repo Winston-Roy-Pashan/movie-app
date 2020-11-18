@@ -8,8 +8,8 @@ import { Tvshow } from '../../interface/tvshow';
 })
 export class TvshowComponent implements OnInit {
 
-  isloading=false;
-  tvshowList:Tvshow[];
+  isloading = false;
+  tvshowList: Tvshow[];
 
   constructor(private movieservice: MovielistService) { }
 
@@ -18,12 +18,10 @@ export class TvshowComponent implements OnInit {
 
   }
   loadTvshow(): void {
-    this.isloading=true;
+    this.isloading = true;
     this.movieservice.getTvShows().subscribe(response => {
       this.tvshowList = response.data.results;
-      console.log("tvshow...........",this.tvshowList)
-      console.log('tvshow', response);
-      this.isloading=false;
+      this.isloading = false;
     });
   }
 
